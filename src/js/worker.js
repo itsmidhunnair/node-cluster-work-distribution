@@ -1,5 +1,5 @@
 // worker.js
-const { parentPort } = require("worker_threads");
+import { parentPort } from "worker_threads";
 
 // Processing function to simulate product processing
 const processProduct = (product, workerId) => {

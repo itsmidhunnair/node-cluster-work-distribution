@@ -1,5 +1,6 @@
-const { Worker, isMainThread, parentPort } = require("worker_threads");
-const path = require("path");
+import { Worker, isMainThread, parentPort } from "worker_threads";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const products = [
   "product1",
@@ -18,6 +19,10 @@ const products = [
   "product14",
   "product15",
 ];
+
+// Get __dirname using import.meta.url
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const main = async () => {
   if (isMainThread) {

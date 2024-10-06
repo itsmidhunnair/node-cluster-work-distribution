@@ -5,9 +5,10 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-   "dev": "node --loader ts-node/esm src/main.ts",
+    "dev": "node --loader ts-node/esm src/main.ts",
     "build": "tsc",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "start:js": "node ./src/js/main.js"
   },
   "keywords": [],
   "author": "",
